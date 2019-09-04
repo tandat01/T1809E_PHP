@@ -25,3 +25,12 @@ $factory->define(User::class, function (Faker $faker) {
         'remember_token' => Str::random(10),
     ];
 });
+$factory->define(App\Danhmuc::class,function (Faker $faker){
+    return[
+        'danhmuc_name'=>$faker->jobTitle,
+        'content'=>$faker->jobTitle,
+        'images'=>$faker->image(),
+        'describe'=>$faker->jobTitle,
+        'status'=>$faker->jobTitle
+    ];
+});

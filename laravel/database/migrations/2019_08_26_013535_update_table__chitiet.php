@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UpdateTableMenu extends Migration
+class UpdateTablechitiet extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class UpdateTableMenu extends Migration
      */
     public function up()
     {
-        Schema::table('menu', function (Blueprint $table) {
+        Schema::table('chitiet', function (Blueprint $table) {
+            $table->foreign("goido_id")->references("goido_id")->on("goido");
             $table->foreign("sanpham_id")->references("sanpham_id")->on("sanpham");
-            $table->foreign("nhanvien_id")->references("nhanvien_id")->on("nhanvien");
-            $table->foreign("khachhang_id")->references("khachhang_id")->on("khachhang");
         });
     }
 
@@ -27,10 +26,9 @@ class UpdateTableMenu extends Migration
      */
     public function down()
     {
-        Schema::table('menu', function (Blueprint $table) {
+        Schema::table('chitiet', function (Blueprint $table) {
+            $table->dropForeign(["goido_id"]);
             $table->dropForeign(["sanpham_id"]);
-            $table->dropForeign(["nhanvien_id"]);
-            $table->dropForeign(["khachhang_id"]);
         });
     }
 }

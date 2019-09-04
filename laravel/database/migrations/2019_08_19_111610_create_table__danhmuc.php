@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableNhanvien extends Migration
+class CreateTabledanhmuc extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateTableNhanvien extends Migration
      */
     public function up()
     {
-        Schema::create('nhanvien', function (Blueprint $table) {
-            $table->bigIncrements('nhanvien_id');
-            $table->string("name");
-            $table->string("ghi_do");
-            $table->string("gia");
-            $table->string("phan_hoi");
-            $table->string("chon_ban");
-            $table->unsignedBigInteger("khachhang_id");
+        Schema::create('danhmuc', function (Blueprint $table) {
+            $table->bigIncrements('danhmuc_id');
+            $table->string("danhmuc_name");
+            $table->string("content");
+            $table->binary("images");
+            $table->string("describe");
+            $table->string("status");
             $table->unsignedTinyInteger("active")->default(1);
             $table->timestamps();
         });
@@ -33,6 +32,6 @@ class CreateTableNhanvien extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nhanvien');
+        Schema::dropIfExists('danhmuc');
     }
 }

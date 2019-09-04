@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableKhachhang extends Migration
+class CreateTablechitiet extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateTableKhachhang extends Migration
      */
     public function up()
     {
-        Schema::create('khachhang', function (Blueprint $table) {
-            $table->bigIncrements('khachhang_id');
-            $table->string("name");
-            $table->string("telephone");
-            $table->string("email");
-            $table->unsignedTinyInteger("active")->default(1);
+        Schema::create('chitiet', function (Blueprint $table) {
+            $table->bigIncrements('chitiet_id');
+            $table->unsignedBigInteger("goido_id");
+            $table->unsignedBigInteger("sanpham_id");
+            $table->integer("quantity");
+            $table->integer("active")->default(1);
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateTableKhachhang extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('khachhang');
+        Schema::dropIfExists('orderdetail');
     }
 }
