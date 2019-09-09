@@ -31,6 +31,19 @@ $factory->define(App\Danhmuc::class,function (Faker $faker){
         'content'=>$faker->jobTitle,
         'images'=>$faker->image(),
         'describe'=>$faker->jobTitle,
-        'status'=>$faker->jobTitle
+        'status'=>$faker->numberBetween(1),
     ];
 });
+$factory->define(App\Sanpham::class,function (Faker $faker){
+    return[
+        'sanpham_name'=>$faker->jobTitle,
+        'danhmuc_id'=>$faker->randomFloat(0,1,100),
+        'detail'=>$faker->jobTitle,
+        'price'=>$faker->randomNumber(1),
+        'image'=>$faker->image(),
+        'date'=>$faker->date('Y-m-d',$max='now'),
+        'pricenew'=>$faker->randomNumber(2),
+        'status'=>$faker->numberBetween(1),
+    ];
+});
+

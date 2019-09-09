@@ -12,5 +12,10 @@ class UserTable extends Seeder
     public function run()
     {
         factory(App\Danhmuc::class,100)->create();
+        factory(App\Sanpham::class,20)->create();
+        factory(App\User::class,50)->create();
+
     }
+
 }
+
