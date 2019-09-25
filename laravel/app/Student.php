@@ -10,9 +10,9 @@ class Student extends Model
     protected $primaryKey = 'student_id';
     protected  $fillable =[
         "student_name",
-        "age",
-        "address",
+        "email",
         "telephone",
+        "feedback",
         "active",
     ];
 }

@@ -3,7 +3,7 @@
         <div id="main-menu" class="main-menu collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active">
-                    <a href="{{url('/index')}}"><i class="menu-icon fa fa-laptop"></i>Home </a>
+                    <a href="{{url('/index')}}"><i class="menu-icon fa fa-laptop"></i>Home</a>
                 </li>
                 <li class="menu-title">UI elements</li><!-- /.menu-title -->
                 <li class="menu-item-has-children dropdown">
@@ -27,7 +27,7 @@
                         <li><i class="fa fa-table"></i><a href="{{url('/danh-muc')}}">Table Danh mục</a></li>
                         <li><i class="fa fa-table"></i><a href="{{url('/san-pham')}}">Table San phẩm</a></li>
                         <li><i class="fa fa-table"></i><a href="{{url('/nhan-vien')}}">Table Nhân viên</a></li>
-                        <li><i class="fa fa-table"></i><a href="{{url('/khach-hang')}}">Table khách hàng</a></li>
+                        <li><i class="fa fa-table"></i><a href="{{url('/khach-hang')}}">Table Khách hàng</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children dropdown">
@@ -36,7 +36,7 @@
                         <li><i class="menu-icon fa fa-th"></i><a href="{{url('/them-danhmuc')}}">Form Danh muc</a></li>
                         <li><i class="menu-icon fa fa-th"></i><a href="{{url('/them-nhanvien')}}">Form Nhan viên</a></li>
                         <li><i class="menu-icon fa fa-th"></i><a href="{{url('/them-sanpham')}}">Form Sản phẩm</a></li>
-                        <li><i class="menu-icon fa fa-th"></i><a href="{{url('/them-khachhang')}}">Form Khach hang</a></li>
+                        <li><i class="menu-icon fa fa-th"></i><a href="{{url('/them-khachhang')}}">Form Khách hàng</a></li>
                     </ul>
                 </li>
 
